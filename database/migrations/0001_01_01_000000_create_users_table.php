@@ -13,10 +13,32 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('firstname');
+            $table->string('middlename')->nullable();
+            $table->string('lastname');
             $table->string('email')->unique();
+            $table->string('username')->nullable();
+            $table->string('type');
+            $table->string('phone')->nullable();
             $table->timestamp('email_verified_at')->nullable();
+            $table->timestamp('phone_verified_at')->nullable();
             $table->string('password');
+            $table->string('avatar')->nullable();
+            $table->string('address')->nullable();
+            $table->string('country')->nullable();
+            $table->string('country_code')->nullable();
+            $table->string('dial_code')->nullable();
+            $table->integer('created_by')->nullable();
+            $table->boolean('is_active')->nullable()->default(false);
+            $table->string('lang')->nullable();
+            $table->string('layout')->nullable();
+            $table->string('color_scheme')->nullable();
+            $table->string('layout_width')->nullable();
+            $table->string('layout_position')->nullable();
+            $table->string('topbar_color')->nullable();
+            $table->string('sidebar_size')->nullable();
+            $table->string('sidebar_view')->nullable();
+            $table->string('sidebar_color')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

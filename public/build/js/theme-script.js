@@ -166,7 +166,7 @@ let themesettings = `
                                 </div>
                             </div>
                             <div class="col-4">
-                                <a href="layout-rtl.html" class="theme-layout mb-3">
+                                <a href="layout-rtl" class="theme-layout mb-3">
                                     <span class="d-block mb-2 layout-img">
                                         <img src="build/img/theme/rtl.svg" alt="img">
                                     </span>                                    

@@ -74,26 +74,26 @@
   },
   "resources/img/theme/bg-01.jpg": {
     "file": "icons/bg-01.jpg",
-    "src": "resources/img/theme/bg-01.jpg"
+    "src": "resources/img/theme/bg-06.jpg"
   },
   "resources/img/theme/bg-02.jpg": {
-    "file": "icons/bg-02.jpg",
-    "src": "resources/img/theme/bg-02.jpg"
+    "file": "icons/bg-01.jpg",
+    "src": "resources/img/theme/bg-06.jpg"
   },
   "resources/img/theme/bg-03.jpg": {
-    "file": "icons/bg-03.jpg",
-    "src": "resources/img/theme/bg-03.jpg"
+    "file": "icons/bg-01.jpg",
+    "src": "resources/img/theme/bg-06.jpg"
   },
   "resources/img/theme/bg-04.jpg": {
-    "file": "icons/bg-04.jpg",
-    "src": "resources/img/theme/bg-04.jpg"
+    "file": "icons/bg-01.jpg",
+    "src": "resources/img/theme/bg-06.jpg"
   },
   "resources/img/theme/bg-05.jpg": {
-    "file": "icons/bg-05.jpg",
-    "src": "resources/img/theme/bg-05.jpg"
+    "file": "icons/bg-01.jpg",
+    "src": "resources/img/theme/bg-06.jpg"
   },
   "resources/img/theme/bg-06.jpg": {
-    "file": "icons/bg-06.jpg",
+    "file": "icons/bg-01.jpg",
     "src": "resources/img/theme/bg-06.jpg"
   },
   "resources/img/theme/pattern-01.png": {
