@@ -30,7 +30,7 @@
                         <form action="{{url('index')}}" class="vh-100">
                             <div class="vh-100 d-flex flex-column justify-content-between p-4 pb-0">
                                 <div class=" mx-auto mb-5 text-center">
-                                    <img src="{{URL::asset('build/img/logo.svg')}}"
+                                    <img src="{{URL::asset('build/img/logo.png')}}"
                                         class="img-fluid" alt="Logo">
                                 </div>
                                 <div class="">
@@ -81,19 +81,19 @@
                                             <div class="text-center me-2 flex-fill">
                                                 <a href="javascript:void(0);"
                                                     class="br-10 p-2 btn btn-info d-flex align-items-center justify-content-center">
-                                                    <img class="img-fluid m-1" src="{{URL::asset('build/img/icons/facebook-logo.svg')}}" alt="Facebook">
+                                                    <img class="img-fluid m-1" src="{{URL::asset('build/img/icons/facebook-logo.png')}}" alt="Facebook">
                                                 </a>
                                             </div>
                                             <div class="text-center me-2 flex-fill">
                                                 <a href="javascript:void(0);"
                                                     class="br-10 p-2 btn btn-outline-light border d-flex align-items-center justify-content-center">
-                                                    <img class="img-fluid m-1" src="{{URL::asset('build/img/icons/google-logo.svg')}}" alt="Facebook">
+                                                    <img class="img-fluid m-1" src="{{URL::asset('build/img/icons/google-logo.png')}}" alt="Facebook">
                                                 </a>
                                             </div>
                                             <div class="text-center flex-fill">
                                                 <a href="javascript:void(0);"
                                                     class="bg-dark br-10 p-2 btn btn-dark d-flex align-items-center justify-content-center">
-                                                    <img class="img-fluid m-1" src="{{URL::asset('build/img/icons/apple-logo.svg')}}" alt="Apple">
+                                                    <img class="img-fluid m-1" src="{{URL::asset('build/img/icons/apple-logo.png')}}" alt="Apple">
                                                 </a>
                                             </div>
                                         </div>

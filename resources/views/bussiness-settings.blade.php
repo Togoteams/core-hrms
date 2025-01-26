@@ -142,7 +142,7 @@
                                         <div class="col-md-6">
                                             <div class="d-flex align-items-center flex-wrap row-gap-3 bg-light w-100 rounded p-3 mb-4">                                                
                                                 <div class="d-flex align-items-center justify-content-center avatar avatar-xxl bg-white rounded border border-dashed me-2 flex-shrink-0 text-dark frames px-2">
-                                                    <img src="{{ URL::asset('build/img/logo.svg') }}" class="img-fluid" alt="logo">
+                                                    <img src="{{ URL::asset('build/img/logo.png') }}" class="img-fluid" alt="logo">
                                                 </div>                                              
                                                 <div class="profile-upload">
                                                     <div class="mb-2">

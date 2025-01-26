@@ -8,7 +8,7 @@
                 <form action="{{url('reset-password-3')}}" class="digit-group vh-100">
                     <div class="vh-100 d-flex flex-column justify-content-between p-4 pb-0">
                         <div class=" mx-auto mb-5 text-center">
-                            <img src="{{URL::asset('build/img/logo.svg')}}"
+                            <img src="{{URL::asset('build/img/logo.png')}}"
                                 class="img-fluid" alt="Logo">
                         </div>
                         <div class="">

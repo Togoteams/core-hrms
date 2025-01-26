@@ -8242,7 +8242,7 @@
                                 <div class="row justify-content-between align-items-center border-bottom mb-3">
                                     <div class="col-md-6">
                                         <div class="mb-2">
-                                            <img src="{{ URL::asset('build/img/logo.svg') }}" class="img-fluid" alt="logo">
+                                            <img src="{{ URL::asset('build/img/logo.png') }}" class="img-fluid" alt="logo">
                                         </div>
                                         <p>3099 Kennedy Court Framingham, MA 01702</p>
                                     </div>
@@ -8377,7 +8377,7 @@
                                 </div>
                                 <div class="text-center">
                                     <div class="mb-3">
-                                        <img src="{{ URL::asset('build/img/logo.svg') }}" class="img-fluid" alt="logo">
+                                        <img src="{{ URL::asset('build/img/logo.png') }}" class="img-fluid" alt="logo">
                                     </div>
                                     <p class="text-dark mb-1">Payment Made Via bank transfer / Cheque in the name of Thomas Lawler</p>
                                     <div class="d-flex justify-content-center align-items-center">
@@ -8517,7 +8517,7 @@
                                 <div class="row justify-content-between align-items-center border-bottom mb-3">
                                     <div class="col-md-6">
                                         <div class="mb-2">
-                                            <img src="{{ URL::asset('build/img/logo.svg') }}" class="img-fluid" alt="logo">
+                                            <img src="{{ URL::asset('build/img/logo.png') }}" class="img-fluid" alt="logo">
                                         </div>
                                         <p>3099 Kennedy Court Framingham, MA 01702</p>
                                     </div>
@@ -9332,7 +9332,7 @@
                     <div class="row justify-content-between align-items-center mb-3">
                         <div class="col-md-6">
                             <div class="mb-4">
-                                <img src="{{ URL::asset('build/img/logo.svg') }}" class="img-fluid" alt="logo">
+                                <img src="{{ URL::asset('build/img/logo.png') }}" class="img-fluid" alt="logo">
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -11081,7 +11081,7 @@
                     <div class="row justify-content-between align-items-center mb-3">
                         <div class="col-md-6">
                             <div class="mb-4">
-                                <img src="{{ URL::asset('build/img/logo.svg') }}" class="img-fluid" alt="logo">
+                                <img src="{{ URL::asset('build/img/logo.png') }}" class="img-fluid" alt="logo">
                             </div>
                         </div>
                         <div class="col-md-6">
