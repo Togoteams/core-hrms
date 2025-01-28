@@ -1,22 +1,27 @@
 name: Deploy HRMS to DEVROCKS_SERVER
+
 on:
   push:
     branches:
-      - main
+      - main  # Deploy only on pushes to main branch
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
+    # Step 1: Checkout the repository code
     - name: Checkout Code
       uses: actions/checkout@v3
 
+    # Step 2: Set up SSH with a passphrase-less private key
     - name: Set up SSH
       uses: webfactory/ssh-agent@v0.7.0
       with:
         ssh-private-key: ${{ secrets.CPANEL_SSH_KEY }}
+        log-public-key: true
 
+    # Step 3: Sync the code to cPanel
     - name: Deploy to cPanel
       run: |
         rsync -avz --exclude=".git" --delete \
@@ -24,11 +29,14 @@ jobs:
           ./ \
           devrocks@devrockspro.online:/home/devrocks/public_html
 
-    - name: Install Dependencies
+    # Step 4: Install dependencies and optimize the Laravel app
+    - name: Install Dependencies and Optimize
       run: |
         ssh -o StrictHostKeyChecking=no devrocks@devrockspro.online << 'EOF'
         cd /home/devrocks/public_html
         composer install --no-dev --optimize-autoloader
         php artisan migrate --force
         php artisan config:cache
+        php artisan route:cache
+        php artisan view:cache
         EOF
