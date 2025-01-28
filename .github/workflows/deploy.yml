@@ -10,33 +10,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Checkout the repository code
     - name: Checkout Code
       uses: actions/checkout@v3
 
-    # Step 2: Set up SSH with a passphrase-less private key
-    - name: Set up SSH
-      uses: webfactory/ssh-agent@v0.7.0
-      with:
-        ssh-private-key: ${{ secrets.CPANEL_SSH_KEY }}
-        log-public-key: true
+    - name: Install sshpass
+      run: sudo apt-get update && sudo apt-get install -y sshpass
 
-    # Step 3: Sync the code to cPanel
     - name: Deploy to cPanel
       run: |
-        rsync -avz --exclude=".git" --delete \
+        sshpass -p '#N~bo&N-Pnfy' rsync -avz --exclude=".git" --delete \
           -e "ssh -o StrictHostKeyChecking=no" \
           ./ \
           devrocks@devrockspro.online:/home/devrocks/public_html
 
-    # Step 4: Install dependencies and optimize the Laravel app
-    - name: Install Dependencies and Optimize
+    - name: Install Dependencies
       run: |
-        ssh -o StrictHostKeyChecking=no devrocks@devrockspro.online << 'EOF'
+        sshpass -p '#N~bo&N-Pnfy' ssh -o StrictHostKeyChecking=no devrocks@devrockspro.online << 'EOF'
         cd /home/devrocks/public_html
         composer install --no-dev --optimize-autoloader
         php artisan migrate --force
         php artisan config:cache
-        php artisan route:cache
-        php artisan view:cache
         EOF
+
