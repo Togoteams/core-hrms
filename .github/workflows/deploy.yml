@@ -2,7 +2,7 @@ name: Deploy HRMS to DEVROCKS_SERVER
 on:
   push:
     branches:
-      - main  # Deploy only on pushes to main branch
+      - main
 
 jobs:
   deploy:
@@ -12,19 +12,21 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v3
 
-    - name: Install sshpass
-      run: sudo apt-get install -y sshpass
+    - name: Set up SSH
+      uses: webfactory/ssh-agent@v0.7.0
+      with:
+        ssh-private-key: ${{ secrets.CPANEL_SSH_KEY }}
 
     - name: Deploy to cPanel
       run: |
-        sshpass -p '#N~bo&N-Pnfy' rsync -avz --exclude=".git" --delete \
+        rsync -avz --exclude=".git" --delete \
           -e "ssh -o StrictHostKeyChecking=no" \
           ./ \
           devrocks@devrockspro.online:/home/devrocks/public_html
 
     - name: Install Dependencies
       run: |
-        sshpass -p '#N~bo&N-Pnfy' ssh -o StrictHostKeyChecking=no devrocks@devrockspro.online << 'EOF'
+        ssh -o StrictHostKeyChecking=no devrocks@devrockspro.online << 'EOF'
         cd /home/devrocks/public_html
         composer install --no-dev --optimize-autoloader
         php artisan migrate --force
