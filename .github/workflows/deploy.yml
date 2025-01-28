@@ -1,0 +1,35 @@
+name: Deploy HRMS to DEVROCKS_SERVER
+
+on:
+  push:
+    branches:
+      - main  
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Set up SSH
+      uses: webfactory/ssh-agent@v0.7.0
+      with:
+        ssh-private-key: ${{ secrets.CPANEL_SSH_KEY }}
+
+    - name: Deploy to cPanel
+      run: |
+        rsync -avz --exclude=".git" --delete \
+          -e "ssh -o StrictHostKeyChecking=no" \
+          ./ \
+          devrocks@devrockspro.online:/home/devrocks/public_html
+
+    - name: Install Dependencies
+      run: |
+        ssh -o StrictHostKeyChecking=no devrocks@devrockspro.online << 'EOF'
+        cd /home/devrocks/public_html
+        composer install --no-dev --optimize-autoloader
+        php artisan migrate --force
+        php artisan config:cache
+        EOF
