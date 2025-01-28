@@ -1,4 +1,4 @@
-name: Deploy HRMS to DEVROCKS_SERVER
+name: Deploy HRMS to SCAFILLIM
 
 on:
   push:
@@ -18,15 +18,15 @@ jobs:
 
     - name: Deploy to cPanel
       run: |
-        sshpass -p '#N~bo&N-Pnfy' rsync -avz --exclude=".git" --delete \
+        sshpass -p '{wRue3@DDcG$' rsync -avz --exclude=".git" --delete \
           -e "ssh -o StrictHostKeyChecking=no" \
           ./ \
-          devrocks@devrockspro.online:/home/devrocks/public_html
+          scaffskk@scafffilm.com:/home1/scaffskk/public_html
 
     - name: Install Dependencies
       run: |
-        sshpass -p '#N~bo&N-Pnfy' ssh -o StrictHostKeyChecking=no devrocks@devrockspro.online << 'EOF'
-        cd /home/devrocks/public_html
+        sshpass -p '{wRue3@DDcG$' ssh -o StrictHostKeyChecking=no scaffskk@scafffilm.com << 'EOF'
+        cd /home1/scaffskk/public_html
         composer install --no-dev --optimize-autoloader
         php artisan migrate --force
         php artisan config:cache
