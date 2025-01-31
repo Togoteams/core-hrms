@@ -14,6 +14,7 @@
 <!-- Theme Script js -->
 <script src="{{ URL::asset('build/js/theme-script.js') }}"></script>
 @endif
+<script src="{{ asset('build/js/jquery/jquery.min.js') }}"></script>
 
 @if (!Route::is(['layout-rtl']))
 <!-- Bootstrap CSS -->
@@ -152,6 +153,6 @@
 
 <!-- Pe7 CSS -->
 <link rel="stylesheet" href="{{ URL::asset('build/plugins/icons/weather/weathericons.css') }}">
-
+<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
 <!-- Main CSS -->
 <link rel="stylesheet" href="{{ URL::asset('build/css/style.css') }}">

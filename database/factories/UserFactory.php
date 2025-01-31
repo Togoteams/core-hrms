@@ -65,7 +65,7 @@ class UserFactory extends Factory
                     'designation_id' => Designation::inRandomOrder()->first()->id ?? Designation::factory()->create()->id,
                 ]);
                 EmployeeSalaryDetail::factory()->count(1)->create([
-                    'employee_detail_id' => $details->id,
+                    'employee_id' => $details->id,
                 ]);
             }
         });

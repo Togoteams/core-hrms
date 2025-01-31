@@ -1,0 +1,15 @@
+{
+    "designations":[
+        {
+            "name" : "Manager"
+        },
+        {
+            "name" : "Developer"
+        },
+        {
+            "name" : "Executive"
+        }
+        
+       
+    ]
+}

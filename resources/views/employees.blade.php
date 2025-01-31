@@ -131,7 +131,7 @@
                 <!-- /Inactive Companies -->
 
                 <!-- No of Plans  -->
-                <div class="col-lg-3 col-md-6 d-flex">
+                {{-- <div class="col-lg-3 col-md-6 d-flex">
                     <div class="card flex-fill">
                         <div class="card-body d-flex align-items-center justify-content-between">
                             <div class="d-flex align-items-center overflow-hidden">
@@ -151,7 +151,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
                 <!-- /No of Plans -->
 
             </div>

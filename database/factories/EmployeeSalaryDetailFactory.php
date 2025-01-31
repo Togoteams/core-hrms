@@ -22,7 +22,7 @@ class EmployeeSalaryDetailFactory extends Factory
     public function definition(): array
     {
         return [
-            'employee_detail_id' => User::whereHas('employeeDetail')
+            'employee_id' => User::whereHas('employeeDetail')
                 ->inRandomOrder()
                 ->where('is_active', true)
                 ->where('type', UserType::EMPLOYEE)

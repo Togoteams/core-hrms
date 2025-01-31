@@ -36,247 +36,8 @@
             <!-- /Breadcrumb -->
 
             <div class="row">
-                <div class="col-xl-4">
-                    <div>
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex align-items-center pb-3 mb-3 border-bottom">
-                                    <a href="{{url('task-details')}}" class="flex-shrink-0 me-2">
-                                        <img src="{{ URL::asset('build/img/social/project-01.svg') }}" alt="Img">
-                                    </a>
-                                    <div>
-                                        <h6 class="mb-1"><a href="{{url('task-details')}}">Hospital Administration</a></h6>
-                                        <div class="d-flex align-items-center">
-                                            <span>8 tasks</span>
-                                            <span class="mx-1"><i class="ti ti-point-filled text-primary"></i></span>
-                                            <span>15 &nbsp;Completed</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <div class="mb-3">
-                                            <span class="mb-1 d-block">Deadline</span>
-                                            <p class="text-dark">31 July 2025</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div class="mb-3">
-                                            <span class="mb-1 d-block">Value</span>
-                                            <p class="text-dark">$549987</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div class="mb-3">
-                                            <span class="mb-1 d-block">Project Lead</span>
-                                            <h6 class="fw-normal d-flex align-items-center">
-                                                <img class="avatar avatar-xs rounded-circle me-1" src="{{ URL::asset('build/img/profiles/avatar-01.jpg') }}" alt="Img">
-                                                Leona
-                                            </h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="bg-light p-2">
-                                    <div class="row align-items-center">
-                                        <div class="col-6">
-                                            <span class="fw-medium d-flex align-items-center">
-                                                <i class="ti ti-clock text-primary me-2"></i>Total 565 Hrs
-                                            </span>
-                                        </div>
-                                        <div class="col-6">
-                                            <div>
-                                                <div class="d-flex align-items-center justify-content-between mb-1">
-                                                    <small class="text-dark">54% Completed</small>
-                                                </div>
-                                                <div class="progress  progress-xs">
-                                                    <div class="progress-bar bg-info" role="progressbar" style="width: 54%"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex align-items-center pb-3 mb-3 border-bottom">
-                                    <a href="{{url('task-details')}}" class="flex-shrink-0 me-2">
-                                        <img src="{{ URL::asset('build/img/social/project-02.svg') }}" alt="Img">
-                                    </a>
-                                    <div>
-                                        <h6 class="mb-1"><a href="{{url('task-details')}}">Educational Platform </a></h6>
-                                        <div class="d-flex align-items-center">
-                                            <span>22 tasks</span>
-                                            <span class="mx-1"><i class="ti ti-point-filled text-primary"></i></span>
-                                            <span>15 Completed</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <div class="mb-3">
-                                            <span class="mb-1 d-block">Deadline</span>
-                                            <p class="text-dark">20 Aug 2025</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div class="mb-3">
-                                            <span class="mb-1 d-block">Value</span>
-                                            <p class="text-dark">$549987</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div class="mb-3">
-                                            <span class="mb-1 d-block">Project Lead</span>
-                                            <h6 class="fw-normal d-flex align-items-center">
-                                                <img class="avatar avatar-xs rounded-circle me-1" src="{{ URL::asset('build/img/profiles/avatar-06.jpg') }}" alt="Img">
-                                                Harvey Smith
-                                            </h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="bg-light p-2">
-                                    <div class="row align-items-center">
-                                        <div class="col-6">
-                                            <span class="fw-medium d-flex align-items-center">
-                                                <i class="ti ti-clock text-primary me-2"></i>Total 700 Hrs
-                                            </span>
-                                        </div>
-                                        <div class="col-6">
-                                            <div>
-                                                <div class="d-flex align-items-center justify-content-between mb-1">
-                                                    <small class="text-dark">89% Completed</small>
-                                                </div>
-                                                <div class="progress  progress-xs">
-                                                    <div class="progress-bar bg-success" role="progressbar" style="width: 75%"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex align-items-center pb-3 mb-3 border-bottom">
-                                    <a href="{{url('task-details')}}" class="flex-shrink-0 me-2">
-                                        <img src="{{ URL::asset('build/img/social/project-04.svg') }}" alt="Img">
-                                    </a>
-                                    <div>
-                                        <h6 class="mb-1"><a href="{{url('task-details')}}">Chat & Call  Mobile App</a></h6>
-                                        <div class="d-flex align-items-center">
-                                            <span>20 tasks</span>
-                                            <span class="mx-1"><i class="ti ti-point-filled text-primary"></i></span>
-                                            <span>10 Completed</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <div class="mb-3">
-                                            <span class="mb-1 d-block">Deadline</span>
-                                            <p class="text-dark">18 Oct 2025</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div class="mb-3">
-                                            <span class="mb-1 d-block">Value</span>
-                                            <p class="text-dark">$345987</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div class="mb-3">
-                                            <span class="mb-1 d-block">Project Lead</span>
-                                            <h6 class="fw-normal d-flex align-items-center">
-                                                <img class="avatar avatar-xs rounded-circle me-1" src="{{ URL::asset('build/img/profiles/avatar-27.jpg') }}" alt="Img">
-                                                Stephan Peralt
-                                            </h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="bg-light p-2">
-                                    <div class="row align-items-center">
-                                        <div class="col-6">
-                                            <span class="fw-medium d-flex align-items-center">
-                                                <i class="ti ti-clock text-primary me-2"></i>Total 700 Hrs
-                                            </span>
-                                        </div>
-                                        <div class="col-6">
-                                            <div>
-                                                <div class="d-flex align-items-center justify-content-between mb-1">
-                                                    <small class="text-dark">61% Completed</small>
-                                                </div>
-                                                <div class="progress  progress-xs">
-                                                    <div class="progress-bar bg-purple" role="progressbar" style="width: 61%"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex align-items-center pb-3 mb-3 border-bottom">
-                                    <a href="{{url('task-details')}}" class="flex-shrink-0 me-2">
-                                        <img src="{{ URL::asset('build/img/social/project-05.svg') }}" alt="Img">
-                                    </a>
-                                    <div>
-                                        <h6 class="mb-1"><a href="{{url('task-details')}}">Travel Planning Website</a></h6>
-                                        <div class="d-flex align-items-center">
-                                            <span>18 tasks</span>
-                                            <span class="mx-1"><i class="ti ti-point-filled text-primary"></i></span>
-                                            <span>12 Completed</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <div class="mb-3">
-                                            <span class="mb-1 d-block">Deadline</span>
-                                            <p class="text-dark">23 Nov 2025</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div class="mb-3">
-                                            <span class="mb-1 d-block">Value</span>
-                                            <p class="text-dark">$563987</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div class="mb-3">
-                                            <span class="mb-1 d-block">Project Lead</span>
-                                            <h6 class="fw-normal d-flex align-items-center">
-                                                <img class="avatar avatar-xs rounded-circle me-1" src="{{ URL::asset('build/img/profiles/avatar-23.jpg') }}" alt="Img">
-                                                Doglas Martini
-                                            </h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="bg-light p-2">
-                                    <div class="row align-items-center">
-                                        <div class="col-6">
-                                            <span class="fw-medium d-flex align-items-center">
-                                                <i class="ti ti-clock text-primary me-2"></i>Total 700 Hrs
-                                            </span>
-                                        </div>
-                                        <div class="col-6">
-                                            <div>
-                                                <div class="d-flex align-items-center justify-content-between mb-1">
-                                                    <small class="text-dark">21% Completed</small>
-                                                </div>
-                                                <div class="progress  progress-xs">
-                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 21%"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-8">
+                
+                <div class="col-xl-12">
                     <div class="row">
                         <div class="col-lg-5">
                             <div class="d-flex align-items-center flex-wrap row-gap-3 mb-3">
@@ -354,19 +115,7 @@
                     </div>
                     <div class="tab-content" id="pills-tabContent">
                         <div class="tab-pane fade show active" id="pills-home" role="tabpanel">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="mb-3">Hospital Administration</h5>
-                                    <div class="bg-light p-2 rounded">
-                                        <span class="d-block mb-1">Tasks Done</span>
-                                        <h4 class="mb-2">41 / 43</h4>
-                                        <div class="progress progress-xs mb-2">
-                                            <div class="progress-bar bg-info" role="progressbar" style="width: 84%;"></div>
-                                        </div>
-                                        <p>84% Completed</p>
-                                    </div>
-                                </div>
-                            </div>
+                            
                             <div class="text-end mb-3 pb-3 border-bottom">
                                 <div class="dropdown">
                                     <a href="javascript:void(0);" class="dropdown-toggle btn btn-white d-inline-flex align-items-center" data-bs-toggle="dropdown">
@@ -1584,7 +1333,154 @@
     </div>
     <!-- /Page Wrapper -->
 
-    @component('components.modal-popup')
-    @endcomponent
+    <!-- Add Task -->
+    <div class="modal fade" id="add_task">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Add New Task  </h4>
+                    <button type="button" class="btn-close custom-btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="ti ti-x"></i>
+                    </button>
+                </div>
+                <form action="{{route('task.add')}}" method="POST" class="formsubmit">
+                    @csrf
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="mb-3">
+                                        <label class="form-label">Task Name</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Due Date</label>
+                                    <div class="input-icon-end position-relative">
+                                        <input type="text" class="form-control datetimepicker" placeholder="dd/mm/yyyy">
+                                        <span class="input-icon-addon">
+                                            <i class="ti ti-calendar text-gray-7"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Project</label>
+                                    <select class="select">
+                                        <option>Select</option>
+                                        <option>Office Management</option>
+                                        <option>Clinic Management </option>
+                                        <option>Educational Platform</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="mb-3">
+                                    <label class="form-label me-2">Team Members</label>
+                                    <input class="input-tags form-control" placeholder="Add new" type="text" data-role="tagsinput" name="Label" value="Jerald,Andrew,Philip,Davis">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Tag</label>
+                                    <select class="select">
+                                        <option>Select</option>
+                                        <option>Internal</option>
+                                        <option>Projects</option>
+                                        <option>Meetings</option>
+                                        <option>Reminder</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Status</label>
+                                    <select class="select">
+                                        <option>Select</option>
+                                        <option>Inprogress</option>
+                                        <option>Completed</option>
+                                        <option>Pending</option>
+                                        <option>Onhold</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="mb-3">
+                                    <label class="form-label">Priority</label>
+                                    <select class="select">
+                                        <option>Select</option>
+                                        <option>Medium</option>
+                                        <option>High</option>
+                                        <option>Low</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <label class="form-label">Who Can See this Task?</label>
+                                <div class="d-flex align-items-center">
+                                    <div class="form-check me-3">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                        <label class="form-check-label text-dark" for="flexRadioDefault1">
+                                            Public
+                                        </label>
+                                    </div>
+                                    <div class="form-check me-3">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked="">
+                                        <label class="form-check-label text-dark" for="flexRadioDefault2">
+                                            Private
+                                        </label>
+                                    </div>
+                                    <div class="form-check ">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked="">
+                                        <label class="form-check-label text-dark" for="flexRadioDefault3">
+                                            Admin Only
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="mb-3">
+                                    <label class="form-label">Descriptions</label>
+                                    <div class="summernote"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <label class="form-label">Upload Attachment</label>
+                                <div class="bg-light rounded p-2">
+                                    <div class="profile-uploader border-bottom mb-2 pb-2">
+                                        <div class="drag-upload-btn btn btn-sm btn-white border px-3">
+                                            Select File
+                                            <input type="file" class="form-control image-sign" multiple="">
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between border-bottom mb-2 pb-2">
+                                        <div class="d-flex align-items-center">
+                                            <h6 class="fs-12 fw-medium me-1">Logo.zip</h6>
+                                            <span class="badge badge-soft-info">21MB </span>
+                                        </div>
+                                        <a href="#" class="btn btn-sm btn-icon"><i class="ti ti-trash"></i></a>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="d-flex align-items-center">
+                                            <h6 class="fs-12 fw-medium me-1">Files.zip</h6>
+                                            <span class="badge badge-soft-info">25MB </span>
+                                        </div>
+                                        <a href="#" class="btn btn-sm btn-icon"><i class="ti ti-trash"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-light me-2" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Add New Task</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- /Add Task -->
+
 
 @endsection

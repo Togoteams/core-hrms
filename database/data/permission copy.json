@@ -1,0 +1,44 @@
+{
+    "permissions": [
+         {
+             "name": "View Dashboard","module": "Dashboard", "permissions_for":"admin"
+         },
+         {
+             "name": "Read Users","module": "users", "permissions_for":"admin"
+         },
+         {
+             "name": "Write Users","module": "users", "permissions_for":"admin"
+         },
+         {
+             "name": "Create Users","module": "users", "permissions_for":"admin"
+         },
+         {
+             "name": "Delete Users","module": "users", "permissions_for":"admin"
+         },
+         {
+             "name": "Read Tasks","module": "Tasks", "permissions_for":"admin"
+         },
+         {
+             "name": "Write Tasks","module": "Tasks", "permissions_for":"admin"
+         },
+         {
+             "name": "Create Tasks","module": "Tasks", "permissions_for":"admin"
+         },
+         {
+             "name": "Delete Tasks","module": "Tasks", "permissions_for":"admin"
+         },
+         {
+             "name": "Read Leaves","module": "Leave", "permissions_for":"admin"
+         },
+         {
+             "name": "Write Leaves","module": "Leave", "permissions_for":"admin"
+         },
+         {
+             "name": "Create Leaves","module": "Leave", "permissions_for":"admin"
+         },
+         {
+             "name": "Delete Leaves","module": "Leave", "permissions_for":"admin"
+         }
+    ]
+ }
+ 

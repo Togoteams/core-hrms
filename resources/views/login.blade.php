@@ -27,7 +27,8 @@
             <div class="col-lg-7 col-md-12 col-sm-12">
                 <div class="row justify-content-center align-items-center vh-100 overflow-auto flex-wrap">
                     <div class="col-md-7 mx-auto vh-100">
-                        <form action="{{url('index')}}" class="vh-100">
+                        <form action="{{route('login.custom')}}" class="vh-100  formsubmit" method="POST" >
+                            @csrf
                             <div class="vh-100 d-flex flex-column justify-content-between p-4 pb-0">
                                 <div class=" mx-auto mb-5 text-center">
                                     <img src="{{URL::asset('build/img/logo.png')}}"
@@ -41,7 +42,7 @@
                                     <div class="mb-3">
                                         <label class="form-label">Email Address</label>
                                         <div class="input-group">
-                                            <input type="text" value="" class="form-control border-end-0">
+                                            <input type="text" value="admin@smarthr.com" name="email" id="email" class="form-control border-end-0">
                                             <span class="input-group-text border-start-0">
                                                 <i class="ti ti-mail"></i>
                                             </span>
@@ -50,7 +51,7 @@
                                     <div class="mb-3">
                                         <label class="form-label">Password</label>
                                         <div class="pass-group">
-                                            <input type="password" class="pass-input form-control">
+                                            <input type="password" name="password"  value="User@123" id="password" class="pass-input form-control">
                                             <span class="ti toggle-password ti-eye-off"></span>
                                         </div>
                                     </div>
@@ -73,7 +74,7 @@
                                             <a href="{{url('register')}}" class="hover-a"> Create Account</a>
                                         </h6>
                                     </div>
-                                    <div class="login-or">
+                                    {{-- <div class="login-or">
                                         <span class="span-or">Or</span>
                                     </div>
                                     <div class="mt-2">
@@ -97,7 +98,7 @@
                                                 </a>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                 </div>
                                 <div class="mt-5 pb-4 text-center">
                                     <p class="mb-0 text-gray-9">Copyright &copy; 2024 - Smarthr</p>

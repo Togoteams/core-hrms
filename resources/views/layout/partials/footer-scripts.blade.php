@@ -255,3 +255,10 @@
 <script src="{{ URL::asset('build/js/todo.js') }}"></script>
 <script src="{{ URL::asset('build/js/theme-colorpicker.js') }}"></script>
 <script src="{{ URL::asset('build/js/script.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11.6.14/dist/sweetalert2.all.min.js"></script>
+
+<script>
+    var APP_URL = "{{url('/')}}";
+</script>
+<script src="{{ URL::asset('build/js/common/common.js') }}"></script>

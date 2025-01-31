@@ -13,7 +13,7 @@ class CustomAuthController extends Controller
 
     public function index()
     {
-        
+        // return "sdsd";
         return view('login');
     }  
       
@@ -30,15 +30,17 @@ class CustomAuthController extends Controller
         ]
     );
         $credentials = $request->only('email', 'password');
-           if ($credentials['email']=='admin@example.com' && $credentials['password']=='123456'){
-        return redirect()->intended('index')
-                        ->withSuccess('Signed in');
-        }
         if (Auth::attempt($credentials)) {
-            return redirect()->intended('index')
-                        ->withSuccess('Signed in');
+            $request->session()->regenerate();
+            $redirectUrl = route('dashboard');
+            return response()->json(['status' => true, 'message' => "Signed In",'data'=>['redirect_url'=>$redirectUrl]]);
+
+            // return redirect()->intended(route('dashboard'))
+            //             ->withSuccess('Signed in');
         }
-        return redirect("login")->withErrors('These credentials do not match our records.');
+
+        return response()->json(['status' => false, 'message' => "These credentials do not match our records."]);
+
     }
 
     public function registration()
@@ -96,6 +98,6 @@ class CustomAuthController extends Controller
         Session::flush();
         Auth::logout();
   
-        return Redirect('login');
+        return Redirect(route('login'));
     }
 }

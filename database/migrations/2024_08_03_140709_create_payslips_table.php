@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('ps_id')->nullable();
             $table->string('title')->nullable();
-            $table->foreignId('employee_detail_id')->nullable()->constrained()->onDelete('cascade');
+            $table->foreignId('employee_id')->nullable()->constrained()->onDelete('cascade');
             $table->boolean('use_allowance')->nullable()->default(true);
             $table->boolean('use_deduction')->nullable()->default(true);
             $table->date('payslip_date')->nullable();

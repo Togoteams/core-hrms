@@ -27614,21 +27614,22 @@
     <!-- /Delete Modal -->
 @endif
 
-@if (Route::is(['employees']))
+@if (Route::is(['employee.list']))
     <!-- Add Employee -->
     <div class="modal fade" id="add_employee">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <div class="d-flex align-items-center">
-                        <h4 class="modal-title me-2">Add New Employee</h4><span>Employee  ID : EMP -0024</span>
+                        <h4 class="modal-title me-2">Add New Employee</h4>
                     </div>
                     <button type="button" class="btn-close custom-btn-close" data-bs-dismiss="modal" aria-label="Close">
                         <i class="ti ti-x"></i>
                     </button>
                 </div>
-                <form action="{{url('employees')}}">
+                <form action="{{route('employee.add')}}" class="formsubmit" method="post" enctype="multipart/form-data">
                     <div class="contact-grids-tab">
+                        @csrf()
                         <ul class="nav nav-underline" id="myTab" role="tablist">
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link active" id="info-tab" data-bs-toggle="tab" data-bs-target="#basic-info" type="button" role="tab" aria-selected="true">Basic Information</button>
@@ -27655,7 +27656,7 @@
                                                     <div class="profile-uploader d-flex align-items-center">
                                                         <div class="drag-upload-btn btn btn-sm btn-primary me-2">
                                                             Upload
-                                                            <input type="file" class="form-control image-sign" multiple="">
+                                                            <input type="file" class="form-control image-sign" name="profile_photo" multiple="">
                                                         </div>
                                                         <a href="javascript:void(0);" class="btn btn-light btn-sm">Cancel</a>
                                                     </div>
@@ -27666,26 +27667,26 @@
                                         <div class="col-md-6">
                                             <div class="mb-3">
                                                 <label class="form-label">First Name <span class="text-danger"> *</span></label>
-                                                <input type="text" class="form-control">
+                                                <input type="text" name="firstname" id="firstname" class="form-control">
                                             </div>									
                                         </div>
                                         <div class="col-md-6">
                                             <div class="mb-3">
                                                 <label class="form-label">Last Name</label>
-                                                <input type="email" class="form-control">
+                                                <input type="text"  name="lastname" id="lastname"  class="form-control">
                                             </div>									
                                         </div>
                                         <div class="col-md-6">
                                             <div class="mb-3">
                                                 <label class="form-label">Employee ID <span class="text-danger"> *</span></label>
-                                                <input type="text" class="form-control">
+                                                <input type="text" name="employee_id" id="employee_id"  class="form-control">
                                             </div>									
                                         </div>
                                         <div class="col-md-6">
                                             <div class="mb-3">
                                                 <label class="form-label">Joining Date <span class="text-danger"> *</span></label>
                                                 <div class="input-icon-end position-relative">
-                                                    <input type="text" class="form-control datetimepicker" placeholder="dd/mm/yyyy">
+                                                    <input type="text" class="form-control datetimepicker"  name="date_joined" id="date_joined"  placeholder="dd/mm/yyyy">
                                                     <span class="input-icon-addon">
                                                         <i class="ti ti-calendar text-gray-7"></i>
                                                     </span>
@@ -27695,20 +27696,20 @@
                                         <div class="col-md-6">
                                             <div class="mb-3">
                                                 <label class="form-label">Username <span class="text-danger"> *</span></label>
-                                                <input type="text" class="form-control">
+                                                <input type="text" name="username" id="username"  class="form-control">
                                             </div>									
                                         </div>
                                         <div class="col-md-6">
                                             <div class="mb-3">
                                                 <label class="form-label">Email <span class="text-danger"> *</span></label>
-                                                <input type="email" class="form-control">
+                                                <input type="email" name="email" id="email"  class="form-control">
                                             </div>									
                                         </div>
                                         <div class="col-md-6">
                                             <div class="mb-3 ">
                                                 <label class="form-label">Password <span class="text-danger"> *</span></label>
                                                 <div class="pass-group">
-                                                    <input type="password" class="pass-input form-control">
+                                                    <input type="password" name="password" id="password"  class="pass-input form-control">
                                                     <span class="ti toggle-password ti-eye-off"></span>
                                                 </div>
                                             </div>
@@ -27717,7 +27718,7 @@
                                             <div class="mb-3 ">
                                                 <label class="form-label">Confirm Password <span class="text-danger"> *</span></label>
                                                 <div class="pass-group">
-                                                    <input type="password" class="pass-inputs form-control">
+                                                    <input type="password" name="password_confirmation" id="password_confirmation"  class="pass-inputs form-control">
                                                     <span class="ti toggle-passwords ti-eye-off"></span>
                                                 </div>
                                             </div>
@@ -27725,42 +27726,40 @@
                                         <div class="col-md-6">
                                             <div class="mb-3">
                                                 <label class="form-label">Phone Number <span class="text-danger"> *</span></label>
-                                                <input type="text" class="form-control">
+                                                <input type="text" name="phone" id="phone" class="form-control">
                                             </div>									
                                         </div>
                                         <div class="col-md-6">
                                             <div class="mb-3">
                                                 <label class="form-label">Company<span class="text-danger"> *</span></label>
-                                                <input type="text" class="form-control">
+                                                <input type="text"  name="company" id="company" class="form-control">
                                             </div>									
                                         </div>
                                         <div class="col-md-6">
                                             <div class="mb-3">
                                                 <label class="form-label">Department</label>
-                                                <select class="select">
-                                                    <option>Select</option>
-                                                    <option>All Department</option>
-                                                    <option>Finance</option>
-                                                    <option>Developer</option>
-                                                    <option>Executive</option>
+                                                <select class="select" name="department_id" id="department_id">
+                                                    <option value="">Select</option>
+                                                    <option value="1">Finance</option>
+
+                                                   
                                                 </select>
                                             </div>		
                                         </div>
                                         <div class="col-md-6">
                                             <div class="mb-3">
                                                 <label class="form-label">Designation</label>
-                                                <select class="select">
-                                                    <option>Select</option>
-                                                    <option>Finance</option>
-                                                    <option>Developer</option>
-                                                    <option>Executive</option>
+                                                <select class="select" name="designation_id" id="designation_id">
+                                                    <option value="">Select</option>
+                                                    <option value="1">Manager</option>
+
                                                 </select>
                                             </div>		
                                         </div>
                                         <div class="col-md-12">
                                             <div class="mb-3">
                                                 <label class="form-label">About <span class="text-danger"> *</span></label>
-                                                <textarea class="form-control" rows="3"></textarea>
+                                                <textarea class="form-control"  name="about" id="about"  rows="3"></textarea>
                                             </div>
                                         </div>
                                     </div>

@@ -28,7 +28,7 @@ class PayslipFactory extends Factory
         return [
             'ps_id' => null,
             'title' => null,
-            'employee_detail_id' => User::whereHas('employeeDetail')
+            'employee_id' => User::whereHas('employeeDetail')
                             ->inRandomOrder()
                             ->where('is_active', true)
                             ->where('type', UserType::EMPLOYEE)
@@ -64,11 +64,11 @@ class PayslipFactory extends Factory
             $deductionItems = null;
             $net_pay = 0;
             if(!empty($payslip->use_allowance)){
-                $allowancesItems = EmployeeAllowance::where('employee_detail_id',$payslip->employee_detail_id)->get();
+                $allowancesItems = EmployeeAllowance::where('employee_id',$payslip->employee_id)->get();
                 $allowances = $allowancesItems->sum('amount');
             }
             if(!empty($payslip->use_deductions)){
-                $deductionItems = EmployeeDeduction::where('employee_detail_id',$payslip->employee_detail_id)->get();
+                $deductionItems = EmployeeDeduction::where('employee_id',$payslip->employee_id)->get();
                 $deductions = $deductionItems->sum('amount');
             }
             $net_pay = ($base_salary + $allowances) - $deductions;

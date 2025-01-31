@@ -37,10 +37,11 @@
 	<meta name="keywords" content="admin, estimates, bootstrap, business, html5, responsive, Projects">
 	<meta name="author" content="Dreams technologies - Bootstrap Admin Template">
 	<meta name="robots" content="noindex, nofollow">
-	<title>Smarthr Admin Template</title>
+	<title>5 Core HRMS</title>
 
 
     @include('layout.partials.head')
+
 </head>
 
 @if (!Route::is(['login',
@@ -164,6 +165,7 @@
 <!-- /Main Wrapper -->
 
 @include('layout.partials.footer-scripts')
+@stack('scripts')
 </body>
 
 </html>

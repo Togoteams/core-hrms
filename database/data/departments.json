@@ -1,0 +1,25 @@
+{
+    "departments":[
+        {
+            "name" : "Finance",
+            "location" : "kolkata"
+        },
+        {
+            "name" : "Developer",
+            "location" : "kolkata"
+        },
+        {
+            "name" : "Executive",
+            "location" : "kolkata"
+        },
+        {
+            "name" : "Sales",
+            "location" : "kolkata"
+        },
+        {
+            "name" : "IT",
+            "location" : "kolkata"
+        }
+       
+    ]
+}

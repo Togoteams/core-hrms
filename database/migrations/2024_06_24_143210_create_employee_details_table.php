@@ -11,17 +11,20 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('employee_details', function (Blueprint $table) {
+        Schema::create('employees', function (Blueprint $table) {
             $table->id();
-            $table->string('emp_id')->nullable();
+            $table->uuid();
+            $table->string('employee_id')->nullable();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->foreignId('department_id')->nullable()->constrained()->onDelete('cascade');
-            $table->foreignId('designation_id')->nullable()->constrained()->onDelete('cascade');
+            $table->foreignId('department_id');
+            $table->foreignId('designation_id');
             $table->string('passport_no')->nullable();
             $table->string('passport_expiry_date')->nullable();
+            $table->string('company')->nullable();
             $table->string('passport_tel')->nullable();
             $table->string('nationality')->nullable();
-            $table->string('religion')->nullable();
+            $table->string('religion')->nullable();  
+            $table->string('about')->nullable();  
             $table->string('ethnicity')->nullable();
             $table->string('marital_status')->nullable();
             $table->string('spouse_occupation')->nullable();

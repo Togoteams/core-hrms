@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('employee_work_experiences', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('employee_detail_id')->constrained()->onDelete('cascade');
+            $table->foreignId('employee_id')->constrained()->onDelete('cascade');
             $table->string('company');
             $table->string('location')->nullable();
             $table->string('position')->nullable();

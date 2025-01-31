@@ -1259,10 +1259,12 @@
                                         <span class="avatar avatar-lg me-2 avatar-rounded">
                                             <img src="{{URL::asset('build/img/profiles/avatar-12.jpg')}}" alt="img">
                                         </span>
+                                        @auth
                                         <div>
-                                            <h5 class="mb-0">Kevin Larry</h5>
-                                            <p class="fs-12 fw-medium mb-0">warren@example.com</p>
+                                            <h5 class="mb-0">{{auth()->user()->full_name}}</h5>
+                                            <p class="fs-12 fw-medium mb-0">{{auth()->user()->email}}</p>
                                         </div>
+                                        @endauth
                                     </div>
                                 </div>
                                 <div class="card-body">
@@ -1283,7 +1285,7 @@
                                     </a>
                                 </div>
                                 <div class="card-footer">
-                                    <a class="dropdown-item d-inline-flex align-items-center p-0 py-2" href="{{url('login')}}">
+                                    <a class="dropdown-item d-inline-flex align-items-center p-0 py-2" href="{{route('signout')}}">
                                         <i class="ti ti-login me-2"></i>Logout
                                     </a>
                                 </div>

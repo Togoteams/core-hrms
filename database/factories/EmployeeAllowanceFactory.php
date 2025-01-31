@@ -19,7 +19,7 @@ class EmployeeAllowanceFactory extends Factory
     public function definition(): array
     {
         return [
-            'employee_detail_id' => User::inRandomOrder()
+            'employee_id' => User::inRandomOrder()
                 ->where('type', UserType::EMPLOYEE)
                 ->whereHas('employeeDetail')
                 ->first()
